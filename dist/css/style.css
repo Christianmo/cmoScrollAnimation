@@ -1,0 +1,47 @@
+body {
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+p {
+  font-size: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #666666;
+  line-height: 1.5;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  width: 50%;
+}
+
+.animation img {
+  filter: grayscale(1);
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(-30%, 0, 0);
+  opacity: 0;
+}
+.animation p {
+  transform: translate3d(0, -30%, 0);
+  opacity: 0;
+}
+.animation.animated img {
+  filter: grayscale(0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+.animation.animated p {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
